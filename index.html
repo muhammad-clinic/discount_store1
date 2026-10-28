@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Store | Crockery • Toys • Decor Pieces</title>
+    
+    <!-- Favicon (Browser Tab Icon) using logo.jpg -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gray-950 text-white shadow-md sticky top-0 z-40 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Brand Logo & Name in Header -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="logo.jpg" alt="Discount Store Logo" class="h-12 w-12 rounded-lg object-cover border border-cyan-500/50 shadow-sm">
+                <div>
+                    <span class="text-xl md:text-2xl font-extrabold tracking-wider bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent block leading-none">Discount Store</span>
+                    <span class="text-[10px] text-gray-400 tracking-widest uppercase mt-1 block">Crockery • Toys • Decor Pieces</span>
+                </div>
+            </a>
+
+            <!-- Cart Trigger Button -->
+            <button onclick="toggleCart()" class="relative bg-gradient-to-r from-cyan-600 to-emerald-600 text-white px-5 py-2.5 rounded-xl hover:from-cyan-500 hover:to-emerald-500 transition flex items-center gap-2 shadow-md font-semibold">
+                <i class="fa-solid fa-cart-shopping"></i> 
+                <span>Cart</span>
+                <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold border-2 border-gray-950">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="bg-gray-900 text-white py-12 px-4 text-center border-b border-gray-800 relative overflow-hidden">
+        <div class="max-w-3xl mx-auto relative z-10">
+            <img src="logo.jpg" alt="Discount Store" class="w-28 h-28 mx-auto mb-4 rounded-2xl shadow-lg border border-cyan-500/30 object-cover">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-3 bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
+                Discount Store
+            </h1>
+            <p class="text-gray-300 text-lg">Quality Crockery, Kitchen Gadgets, Toys & Decor Pieces at Unbeatable Prices.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main class="max-w-6xl mx-auto px-4 py-12 flex-1 w-full">
+        <div class="flex justify-between items-center mb-8 border-b pb-3">
+            <h2 class="text-2xl font-bold text-gray-800">Items on Sale</h2>
+            <span class="text-sm text-gray-500 font-medium">5 Products Available</span>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Product 1: HZQ Quick Hand Mixer -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition flex flex-col">
+                <div class="h-72 bg-white p-2 flex items-center justify-center overflow-hidden border-b">
+                    <img src="image_1f0be3.jpg" alt="HZQ Quick Hand Mixer" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">10 Functions + Free Peeler</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">HZQ Quick Hand Mixer</h3>
+                        <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+                            Heavy-duty 10-in-1 rotary hand mixer crafted from ISO-certified food-contact plastic. Comes with a free peeler and effortlessly chops vegetables, minces meat, grinds nuts, and whips up sauces.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Ergonomic rotary crank handle & pouring spout</li>
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Bonus vegetable peeler included</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-t pt-3">
+                            <span class="text-sm text-gray-500">Price</span>
+                            <span class="text-2xl font-extrabold text-teal-700">1,850 PKR</span>
+                        </div>
+                        <button onclick="addToCart('HZQ Quick Hand Mixer', 1850)" class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-teal-600 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: Manual Hand Cutter Small Size -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition flex flex-col">
+                <div class="h-72 bg-white p-2 flex items-center justify-center overflow-hidden border-b">
+                    <img src="WhatsApp Image 2026-10-29 at 12.02.12 AM.jpeg" alt="Manual Hand Cutter Small Size" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">Compact & Handy</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Manual Hand Cutter Small Size</h3>
+                        <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+                            Compact pull-cord mini chopper designed for quick daily prep without electricity. Ideal for finely mincing garlic, herbs, chilies, fruits, and nuts in seconds.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Sharp stainless steel blades & BPA-free bowl</li>
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Lightweight, detachable & easy to wash</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-t pt-3">
+                            <span class="text-sm text-gray-500">Price</span>
+                            <span class="text-2xl font-extrabold text-teal-700">500 PKR</span>
+                        </div>
+                        <button onclick="addToCart('Manual Hand Cutter Small Size', 500)" class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-teal-600 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: Manual Hand Cutter With 2 Liter Capacity with Steel Bowl -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition flex flex-col">
+                <div class="h-72 bg-white p-2 flex items-center justify-center overflow-hidden border-b">
+                    <img src="steel-cutter.jpg" alt="Manual Hand Cutter With 2 Liter Capacity with Steel Bowl" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden w-full h-full bg-teal-50 flex-col items-center justify-center text-teal-800 p-4 text-center">
+                        <i class="fa-solid fa-bowl-rice text-6xl mb-3"></i>
+                        <span class="text-xs text-gray-500">2L Heavy Duty Steel Bowl</span>
+                    </div>
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">2 Liter Steel Bowl</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Manual Hand Cutter With 2 Liter Capacity with Steel Bowl</h3>
+                        <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+                            Family-sized 2-liter manual cutter built with a rust-proof, unbreakable stainless steel bowl. Perfect for heavy-duty meat mincing (qeema) and bulk vegetable prep.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Extra-large 2L shockproof steel container</li>
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Heavy-duty blades for meat & tough veggies</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-t pt-3">
+                            <span class="text-sm text-gray-500">Price</span>
+                            <span class="text-2xl font-extrabold text-teal-700">1,250 PKR</span>
+                        </div>
+                        <button onclick="addToCart('Manual Hand Cutter With 2 Liter Capacity with Steel Bowl', 1250)" class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-teal-600 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: Manual Chopper -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition flex flex-col">
+                <div class="h-72 bg-white p-2 flex items-center justify-center overflow-hidden border-b">
+                    <img src="WhatsApp Image 2026-10-29 at 12.02.12 AM (2).jpeg" alt="Manual Chopper" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">Easy Pull Operation</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Manual Chopper</h3>
+                        <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+                            Tall multi-layer pull-cord food chopper featuring 5 staggered stainless steel blades. Delivers fast, uniform dicing for salads, onions, tomatoes, and boneless meats.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> 5-blade tall shaft for top-to-bottom chopping</li>
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Rust-resistant & BPA-free transparent body</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-t pt-3">
+                            <span class="text-sm text-gray-500">Price</span>
+                            <span class="text-2xl font-extrabold text-teal-700">650 PKR</span>
+                        </div>
+                        <button onclick="addToCart('Manual Chopper', 650)" class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-teal-600 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5: Manual Chopper with Hand Push -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition flex flex-col">
+                <div class="h-72 bg-white p-2 flex items-center justify-center overflow-hidden border-b">
+                    <img src="WhatsApp Image 2026-10-29 at 12.02.13 AM.jpeg" alt="Manual Chopper with Hand Push" class="w-full h-full object-contain hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-5 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">Easy Push Operation</span>
+                        <h3 class="text-xl font-bold text-gray-800 mt-2 mb-2">Manual Chopper with Hand Push</h3>
+                        <p class="text-sm text-gray-600 mb-3 leading-relaxed">
+                            Smooth vertical press-down chopper with a lockable plunger and side grip handle. Just press the top pump to spin the blades and chop veggies, fruits, and nuts effortlessly.
+                        </p>
+                        <ul class="text-xs text-gray-500 space-y-1 mb-4">
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Cord-free vertical push pump mechanism</li>
+                            <li><i class="fa-solid fa-check text-teal-600 mr-1.5"></i> Built-in side handle & safety lock switch</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 border-t pt-3">
+                            <span class="text-sm text-gray-500">Price</span>
+                            <span class="text-2xl font-extrabold text-teal-700">850 PKR</span>
+                        </div>
+                        <button onclick="addToCart('Manual Chopper with Hand Push', 850)" class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-teal-600 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Slide-Over Shopping Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden z-50 flex justify-end">
+        <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col justify-between p-6">
+            
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center border-b pb-4">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bag-shopping text-teal-600 text-xl"></i>
+                    <h3 class="text-xl font-bold text-gray-800">Your Shopping Cart</h3>
+                </div>
+                <button onclick="toggleCart()" class="text-gray-400 hover:text-gray-800 text-2xl font-bold leading-none">&times;</button>
+            </div>
+            
+            <!-- Cart Items List -->
+            <div id="cart-items" class="flex-1 overflow-y-auto py-4 space-y-3">
+                <p class="text-gray-500 text-center py-12">Your cart is currently empty.</p>
+            </div>
+
+            <!-- Modal Footer / Checkout -->
+            <div class="border-t pt-4">
+                <div class="flex justify-between items-center text-lg font-bold mb-4">
+                    <span class="text-gray-600">Total Amount:</span>
+                    <span id="cart-total" class="text-2xl text-teal-700">0 PKR</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full bg-green-600 text-white py-3.5 rounded-xl font-bold hover:bg-green-700 transition flex items-center justify-center gap-2 shadow-md text-lg">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> Buy Now on WhatsApp
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-8 text-center text-sm mt-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <img src="logo.jpg" alt="Discount Store Logo" class="h-8 w-8 rounded object-cover">
+                <p>&copy; 2026 Discount Store. All rights reserved.</p>
+            </div>
+            <a href="https://wa.me/923244219842" target="_blank" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-2 font-medium">
+                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp: 0324-4219842
+            </a>
+        </div>
+    </footer>
+
+    <!-- Cart & WhatsApp Script -->
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCartUI();
+            
+            const modal = document.getElementById('cart-modal');
+            if (modal.classList.contains('hidden')) {
+                toggleCart();
+            }
+        }
+
+        function changeQuantity(index, delta) {
+            cart[index].quantity += delta;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCartUI();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            let totalCount = 0;
+            let totalPrice = 0;
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-gray-500 text-center py-12">Your cart is currently empty.</p>';
+            } else {
+                cartItemsContainer.innerHTML = '';
+                cart.forEach((item, index) => {
+                    totalCount += item.quantity;
+                    const itemSubtotal = item.price * item.quantity;
+                    totalPrice += itemSubtotal;
+
+                    cartItemsContainer.innerHTML += `
+                        <div class="flex justify-between items-center bg-gray-50 p-3 rounded-xl border border-gray-200">
+                            <div class="pr-2">
+                                <h4 class="font-bold text-gray-800 text-sm">${item.name}</h4>
+                                <p class="text-xs text-teal-700 font-semibold mt-0.5">${item.price.toLocaleString()} PKR each</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button onclick="changeQuantity(${index}, -1)" class="w-7 h-7 bg-white border rounded-lg text-gray-700 hover:bg-gray-100 font-bold">-</button>
+                                <span class="text-sm font-bold w-5 text-center">${item.quantity}</span>
+                                <button onclick="changeQuantity(${index}, 1)" class="w-7 h-7 bg-white border rounded-lg text-gray-700 hover:bg-gray-100 font-bold">+</button>
+                                <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700 ml-2">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            cartCount.textContent = totalCount;
+            cartTotal.textContent = totalPrice.toLocaleString() + ' PKR';
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                alert('Please add at least one item to your cart before checking out.');
+                return;
+            }
+
+            let message = "Assalam-o-Alaikum Discount Store! I would like to order the following items:%0A%0A";
+            let total = 0;
+
+            cart.forEach((item, i) => {
+                const sub = item.price * item.quantity;
+                message += `*${i + 1}. ${item.name}*%0A   Qty: ${item.quantity} x ${item.price} PKR = ${sub} PKR%0A`;
+                total += sub;
+            });
+
+            message += `%0A*Total Bill: ${total.toLocaleString()} PKR*%0A%0APlease confirm my order.`;
+
+            const phoneNumber = "923244219842";
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
